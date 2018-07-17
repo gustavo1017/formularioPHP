@@ -1,40 +1,17 @@
 <?php
-
-// if (!$_POST) {
+//accede al metodo de envio
+// if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 //   // code...
-//   header('Location: http://localhost:8081/curso_php/formularios/index.php');
+//   echo "Se enviaron por GET";
+// }else {
+//
+//   echo "Se enviaron por metodo post";
 // }
-//
-//   $nombre = $_POST['nombre'];
-//   $sexo = $_POST['sexo'];
-//   $year = $_POST['year'];
-//   $terminos = $_POST['terminos'];
-//
-//   echo 'Hola, '.$nombre . ' eres '. $sexo;
 
-//print_r($_POST);
-
-//print_r($_GET);
-
-$nombre = $_GET['nombre'];
-echo htmlspecialchars($nombre);
-
-if (!$_GET) {
-header('Location: http://localhost:8081/curso_php/formularios/index.php');
-}
-
-$nombre = $_GET['nombre'];
-$sexo = $_GET['sexo'];
-$year = $_GET['year'];
-$terminos = $_GET['terminos'];
-
-if ($nombre) {
+if (isset($_POST['submit'])) {
   // code...
-  echo $nombre . '<br>';
-}else{
-  echo "El usuario no establecio nombre <br>";
+  echo "Se han enviado los datos correctamente";
+  print_r($_POST['submit']);
 }
-
-
 
  ?>

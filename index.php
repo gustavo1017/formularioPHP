@@ -1,9 +1,4 @@
-<?php
-if ($_POST) {
-  echo $_POST['nombre'];
-}
 
- ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,23 +6,13 @@ if ($_POST) {
     <title>Document</title>
   </head>
   <body>
-    <form  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);  ?>" method="post" name="">
-      <input type="text" placeholder="Nombre:" name="nombre">
-      <br>
-      <label for="hombre">Hombre</label>
-      <input type="radio" name="sexo" value="hombre" id="hombre" >
-      <label for="mujer">Mujer</label>
-      <input type="radio" name="sexo" value="mujer" id="mujer" >
-      <br>
-      <select  name="year" id="year">
-        <option value="2000">2000</option>
-        <option value="2001">2001</option>
-        <option value="2002">2002</option>
-      </select>
-      <br>
-      <label for="terminos">Aceptas los terminos </label>
-      <input type="checkbox" name="terminos" value="ok" id="terminos">
-      <input type="submit" value="Enviar">
+    <form  action="recibe.php" method="post" name="">
+
+        <input type="text" name="nombre" value=""placeholder="nombre:">
+        <br>
+        <input type="email" name="correo" value=""placeholder="correo:">
+        <br>
+        <input type="submit" name="submit" value="">
     </form>
   </body>
 </html>
