@@ -1,3 +1,9 @@
+<?php
+if ($_POST) {
+  echo $_POST['nombre'];
+}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -5,7 +11,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form  action="recibe.php" method="get" name="">
+    <form  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);  ?>" method="post" name="">
       <input type="text" placeholder="Nombre:" name="nombre">
       <br>
       <label for="hombre">Hombre</label>
